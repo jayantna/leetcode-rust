@@ -1,0 +1,26 @@
+{
+    "Print Line": {
+        "prefix": "print0",
+        "body": [
+            "println!(\"$1\"$2);",
+            "$0"
+        ],
+        "description": "Inserts println!() macro"
+    },
+    "Print Value": {
+        "prefix": "print1",
+        "body": [
+            "println!(\"{}\", $1);",
+            "$0"
+        ],
+        "description": "Inserts println!(\"{}\", ...)"
+    },
+    "Print Variable": {
+        "prefix": "print2",
+        "body": [
+            "println!(\"${1:var} = {:?}\", ${1:var});",
+            "$0"
+        ],
+        "description": "Inserts println!() with variable name and debug format"
+    }
+}
