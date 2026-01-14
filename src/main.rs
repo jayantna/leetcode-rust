@@ -9,5 +9,6 @@ fn main() {
     // solutions::_76_minimum_window_substring::Solution::run();
     // solutions::_217_contains_duplicate::Solution::run();
     // solutions::_242_valid_anagram::Solution::run();
-    solutions::_49_group_anagrams::Solution::run();
+    // solutions::_49_group_anagrams::Solution::run();
+    solutions::_347_top_k_frequent_elements::Solution::run();
 }
