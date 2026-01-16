@@ -11,5 +11,6 @@ fn main() {
     // solutions::_242_valid_anagram::Solution::run();
     // solutions::_49_group_anagrams::Solution::run();
     // solutions::_347_top_k_frequent_elements::Solution::run();
-    solutions::_238_product_except_self::Solution::run();
+    // solutions::_238_product_except_self::Solution::run();
+    solutions::_36_valid_sudoki::Solution::run();
 }
