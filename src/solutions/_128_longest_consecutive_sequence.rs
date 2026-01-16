@@ -7,7 +7,6 @@ impl Solution {
         hashset
             .iter()
             .filter(|&&x| !hashset.contains(&(x - 1)))
-            .inspect(|x| print!(" {x} "))
             .map(|&&x| {
                 (x..).take_while(|x| hashset.contains(x)).count()
             }).max().unwrap_or(0) as _
