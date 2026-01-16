@@ -7,4 +7,5 @@ pub mod _242_valid_anagram;
 pub mod  _49_group_anagrams;
 pub mod  _347_top_k_frequent_elements;
 pub mod _238_product_except_self;
-pub mod _36_valid_sudoki;
+pub mod _36_valid_sudoku;
+pub mod _128_longest_consecutive_sequence;
