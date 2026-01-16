@@ -15,6 +15,6 @@ impl Solution {
     pub fn run() {
         let nums = vec![0, 3, 7, 2, 5, 8, 4, 6, 0, 1];
         let result = Solution::_128_longest_consecutive_sequence(nums);
-        // println!("{:?}", result);
+        println!("{:?}", result);
     }
 }
