@@ -9,3 +9,7 @@ pub mod  _347_top_k_frequent_elements;
 pub mod _238_product_except_self;
 pub mod _36_valid_sudoku;
 pub mod _128_longest_consecutive_sequence;
+pub mod _125_valid_palindrome;
+pub mod _167_two_sum_sorted_array;
+pub mod _15_3sum;
+pub mod _11_container_with_most_water;
