@@ -13,3 +13,4 @@ pub mod _125_valid_palindrome;
 pub mod _167_two_sum_sorted_array;
 pub mod _15_3sum;
 pub mod _11_container_with_most_water;
+pub mod _42_trapping_rain_water;

@@ -17,5 +17,6 @@ fn main() {
     // solutions::_125_valid_palindrome::Solution::run();
     // solutions::_167_two_sum_sorted_array::Solution::run();
     // solutions::_15_3sum::Solution::run();
-    solutions::_11_container_with_most_water::Solution::run();
+    // solutions::_11_container_with_most_water::Solution::run();
+    solutions::_42_trapping_rain_water::Solution::run();
 }
