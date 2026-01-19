@@ -19,5 +19,6 @@ fn main() {
     // solutions::_15_3sum::Solution::run();
     // solutions::_11_container_with_most_water::Solution::run();
     // solutions::_42_trapping_rain_water::Solution::run();
-    solutions::_121_best_time_to_buy_sell_stock::Solution::run();
+    // solutions::_121_best_time_to_buy_sell_stock::Solution::run();
+    solutions::_3_longest_substring_without_repeating_char::Solution::run();
 }
