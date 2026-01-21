@@ -23,6 +23,8 @@ fn main() {
     // solutions::_121_best_time_to_buy_sell_stock::Solution::run();
     // solutions::_3_longest_substring_without_repeating_char::Solution::run();
     // solutions::_424_Longest_Repeating_Character_Replacement::Solution::run();
-    aoc::_1_aoc::Advent_Of_Code::run();
+    // aoc::_1_aoc::Advent_Of_Code::run();
+    aoc::_2_aoc::Advent_Of_Code::run();
+
     
 }
