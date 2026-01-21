@@ -1,6 +1,7 @@
 
 #![allow(warnings)]
 mod solutions;
+mod aoc;
 
 fn main() {
     // solutions::_1_two_sum::Solution::run();
@@ -20,5 +21,8 @@ fn main() {
     // solutions::_11_container_with_most_water::Solution::run();
     // solutions::_42_trapping_rain_water::Solution::run();
     // solutions::_121_best_time_to_buy_sell_stock::Solution::run();
-    solutions::_3_longest_substring_without_repeating_char::Solution::run();
+    // solutions::_3_longest_substring_without_repeating_char::Solution::run();
+    // solutions::_424_Longest_Repeating_Character_Replacement::Solution::run();
+    aoc::_1_aoc::Advent_Of_Code::run();
+    
 }
