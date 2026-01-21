@@ -3,3 +3,7 @@ Visit again
 3 sliding window
 
 Solve pending 15
+
+Erase and solve again 
+424
+
