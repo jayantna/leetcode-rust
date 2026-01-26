@@ -25,7 +25,8 @@ fn main() {
     // solutions::_424_Longest_Repeating_Character_Replacement::Solution::run();
     // aoc::_1_aoc::Advent_Of_Code::run();
     // aoc::_2_aoc::Advent_Of_Code::run();
-    aoc::_3_aoc::Advent_Of_Code::run();
+    // aoc::_3_aoc::Advent_Of_Code::run();
+    aoc::_4_aoc::Advent_Of_Code::run();
 
     
 }
