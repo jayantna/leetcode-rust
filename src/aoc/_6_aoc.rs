@@ -10,11 +10,15 @@ impl Advent_Of_Code {
         Advent_Of_Code::part_2();
     }
     fn part_2() -> usize {
+        // Read the input file and split into lines
         let file = fs::read_to_string("./src/aoc/_6_aoc.txt").unwrap();
         let lines: Vec<_> = file.lines().collect();
+        // Identify "delimiters" - columns that are entirely composed of spaces across all lines
         let delimiters: Vec<usize> = (0..lines[0].chars().count())
             .filter(|&i| lines.iter().all(|line| line.chars().nth(i) == Some(' ')))
             .collect();
+        // Create ranges representing chunks (columns) of numbers and their operations.
+        // These ranges are bounded by the delimiters identified above.
         let solve_ranges: Vec<(usize, usize)> = std::iter::once(0)
             .chain(delimiters.iter().map(|&x| x + 1))
             .zip(
@@ -25,11 +29,15 @@ impl Advent_Of_Code {
             )
             .collect();
         let mut total_sum = 0;
+        // Process each range to extract numbers and apply the operator
         for (start, end) in solve_ranges {
+            // The operator (+ or *) is on the last line within this specific range
             let operator = lines.iter().last().unwrap()[start..end]
                 .trim()
                 .parse::<char>()
                 .unwrap();
+            // Each number is formed by joining characters vertically from each column in the range,
+            // taking all rows except the last one (which contains the operator).
             let numbers: Vec<_> = (start..end)
                 .map(|x| {
                     let num = lines
@@ -44,12 +52,13 @@ impl Advent_Of_Code {
                 })
                 .collect();
             println!("{:?}", numbers);
+            // Apply either sum or product based on the group's operator
             let result = match operator {
                 '+' => numbers.iter().sum::<usize>(),
                 '*' => numbers.iter().product::<usize>(),
-                _ => 0
+                _ => 0,
             };
-            total_sum+=result
+            total_sum += result;
         }
         println!("{:?}", total_sum);
         total_sum
