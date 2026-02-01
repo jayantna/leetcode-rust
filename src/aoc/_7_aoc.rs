@@ -27,5 +27,27 @@ impl Advent_Of_Code {
         }
         println!("Part 1 Count: {:?}", count);
 
+        // Part 2: Calculate specific manifold values (beam quantities)
+        // Instead of just tracking presence, we track the 'quantity' of beams at each column.
+        let mut manifolds = vec![0; lines[0].len()];
+        // Initialize the starting position 'S' with 1 unit.
+        manifolds[lines[0].chars().position(|x| x == 'S').unwrap()] = 1;
+
+        for line in lines.iter().copied() {
+            line.chars().enumerate().for_each(|(idx, x)| {
+                if x == '^' {
+                    // When hitting a splitter, the current column's value is distributed
+                    // to its left and right neighbors, and the current index is cleared.
+                    let current_val = manifolds[idx];
+                    manifolds[idx - 1] += current_val;
+                    manifolds[idx + 1] += current_val;
+                    manifolds[idx] = 0;
+                }
+            });
+            // Summary for the current row
+            println!("Manifolds: {:?}", manifolds);
+            let sum = manifolds.iter().sum::<usize>();
+            println!("Row Sum: {:?}", sum);
+        }
     }
 }
