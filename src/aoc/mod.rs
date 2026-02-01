@@ -4,3 +4,4 @@ pub mod _3_aoc;
 pub mod _4_aoc;
 pub mod _5_aoc;
 pub mod _6_aoc;
+pub mod _7_aoc;
