@@ -17,3 +17,4 @@ pub mod _42_trapping_rain_water;
 pub mod _121_best_time_to_buy_sell_stock;
 pub mod _3_longest_substring_without_repeating_char;
 pub mod _424_Longest_Repeating_Character_Replacement;
+pub mod _20_valid_parentheses;
