@@ -29,7 +29,7 @@ fn main() {
     // aoc::_4_aoc::Advent_Of_Code::run();
     // aoc::_5_aoc::Advent_Of_Code::run();
     // aoc::_6_aoc::Advent_Of_Code::run();
-    aoc::_7_aoc::Advent_Of_Code::run();
-
+    // aoc::_7_aoc::Advent_Of_Code::run();
+    aoc::_8_aoc::Advent_Of_Code::run();
     
 }
