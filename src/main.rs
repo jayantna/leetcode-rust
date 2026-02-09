@@ -24,7 +24,8 @@ fn main() {
     // solutions::_3_longest_substring_without_repeating_char::Solution::run();
     // solutions::_424_Longest_Repeating_Character_Replacement::Solution::run();
     // solutions::_20_valid_parentheses::Solution::run();
-    solutions::_150_reverse_polish_notation::Solution::run();
+    // solutions::_150_reverse_polish_notation::Solution::run();
+    solutions::_739_dailyl_temperature::Solution::run();
 
 
 

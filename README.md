@@ -7,3 +7,7 @@ Solve pending 15
 Erase and solve again 
 424
 
+
+
+Chances of speed improvement
+739
