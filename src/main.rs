@@ -28,7 +28,8 @@ fn main() {
     // solutions::_739_dailyl_temperature::Solution::run();
     // solutions::_853_car_fleet::Solution::run();
     // solutions::_84_largest_rectangle_in_histogram::Solution::run();
-    solutions::_704_binary_search::Solution::run();
+    // solutions::_704_binary_search::Solution::run();
+    solutions::_74_search_2d_matrix::Solution::run();
 
 
 
