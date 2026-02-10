@@ -26,7 +26,9 @@ fn main() {
     // solutions::_20_valid_parentheses::Solution::run();
     // solutions::_150_reverse_polish_notation::Solution::run();
     // solutions::_739_dailyl_temperature::Solution::run();
-    solutions::_853_car_fleet::Solution::run();
+    // solutions::_853_car_fleet::Solution::run();
+    // solutions::_84_largest_rectangle_in_histogram::Solution::run();
+    solutions::_704_binary_search::Solution::run();
 
 
 
