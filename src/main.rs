@@ -31,7 +31,8 @@ fn main() {
     // solutions::_704_binary_search::Solution::run();
     // solutions::_74_search_2d_matrix::Solution::run();
     // solutions::_875_koko_eating_bananas::Solution::run();
-    solutions::_153_find_min_in_rotated_sorted_array::Solution::run();
+    // solutions::_153_find_min_in_rotated_sorted_array::Solution::run();
+    solutions::_33_search_in_rotated_sorted_array::Solution::run();
 
 
 

@@ -4,6 +4,7 @@ Visit again for logic:
 42 trapping rain water - sliding window
 3 longest substring without repeating charaters - sliding window
 424 Longest repeating character replacement - sliding window
+_33_search_in_rotated_sorted_array
 
 
 Solve pending:

@@ -27,3 +27,4 @@ pub mod _704_binary_search;
 pub mod _74_search_2d_matrix;
 pub mod _875_koko_eating_bananas;
 pub mod _153_find_min_in_rotated_sorted_array;
+pub mod _33_search_in_rotated_sorted_array;
