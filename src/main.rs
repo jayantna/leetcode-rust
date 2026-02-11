@@ -29,7 +29,9 @@ fn main() {
     // solutions::_853_car_fleet::Solution::run();
     // solutions::_84_largest_rectangle_in_histogram::Solution::run();
     // solutions::_704_binary_search::Solution::run();
-    solutions::_74_search_2d_matrix::Solution::run();
+    // solutions::_74_search_2d_matrix::Solution::run();
+    // solutions::_875_koko_eating_bananas::Solution::run();
+    solutions::_153_find_min_in_rotated_sorted_array::Solution::run();
 
 
 

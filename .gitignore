@@ -1,3 +1,4 @@
 /target
 .agent
+.vscode
 .DS_Store

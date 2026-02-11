@@ -25,3 +25,5 @@ pub mod _853_car_fleet;
 pub mod _84_largest_rectangle_in_histogram;
 pub mod _704_binary_search;
 pub mod _74_search_2d_matrix;
+pub mod _875_koko_eating_bananas;
+pub mod _153_find_min_in_rotated_sorted_array;
