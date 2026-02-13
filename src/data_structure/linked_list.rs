@@ -16,6 +16,32 @@ pub struct ListNode {
                                      // Deallocates the memory on the heap.
 }
 
+impl From<Vec<i32>> for ListNode {
+    fn from(v: Vec<i32>) -> Self {
+        let mut curr = None;
+        for &i in v.iter().rev() {
+            let mut new_node = ListNode::new(i);
+            new_node.next = curr;
+            curr = Some(Box::new(new_node));
+        }
+        *curr.expect("Cannot convert an empty vector to a ListNode")
+    }
+}
+
+impl From<ListNode> for Vec<i32> {
+    fn from(node: ListNode) -> Self {
+        let mut result = Vec::new();
+        let mut curr: Option<Box<ListNode>> = Some(Box::new(node));
+        // Notice the Linked list start Without Option<ListNode> Type
+        // We need to wrap it with Some to make it similar with inner nodes.
+        while let Some(n) = curr {
+            // println!("Heap address: {:p}", n);
+            result.push(n.value);
+            curr = n.next;
+        }
+        result
+    }
+}
 
 
 impl ListNode {
