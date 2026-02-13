@@ -169,6 +169,18 @@ impl ListNode {
         None
     }
 
+    fn linear_search(&self, value: i32) -> Option<i32> {
+        let mut curr = Some(self);
+        let mut count = 0;
+        while let Some(node) = curr {
+            if node.value == value {
+                return Some(count);
+            }
+            curr = node.next.as_deref();
+            count += 1;
+        }
+        None
+    }
 }
 
 pub fn run() {
