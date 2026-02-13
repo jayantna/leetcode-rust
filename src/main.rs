@@ -2,6 +2,7 @@
 #![allow(warnings)]
 mod solutions;
 mod aoc;
+mod data_structure;
 
 fn main() {
     // solutions::_1_two_sum::Solution::run();
@@ -32,7 +33,9 @@ fn main() {
     // solutions::_74_search_2d_matrix::Solution::run();
     // solutions::_875_koko_eating_bananas::Solution::run();
     // solutions::_153_find_min_in_rotated_sorted_array::Solution::run();
-    solutions::_33_search_in_rotated_sorted_array::Solution::run();
+    // solutions::_33_search_in_rotated_sorted_array::Solution::run();
+    // solutions::_981_time_based_k_v_store::Solution::run();
+    // solutions::_4_median_of_2_sorted_arrays::Solution::run();
 
 
 
@@ -44,5 +47,7 @@ fn main() {
     // aoc::_6_aoc::Advent_Of_Code::run();
     // aoc::_7_aoc::Advent_Of_Code::run();
     // aoc::_8_aoc::Advent_Of_Code::run();
+
+    data_structure::linked_list::run();
     
 }
