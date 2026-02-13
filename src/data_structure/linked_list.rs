@@ -125,6 +125,50 @@ impl ListNode {
         }
     }
 
+    /// Inserts a new node at the specified index.
+    /// This uses `std::mem::replace` to swap the existing node with the new one,
+    /// and then links the old node as the 'next' child of the new node.
+    fn push_at(&mut self, index: usize, value: i32) {
+        let mut curr = Some(self);
+        let mut count = 0;
+        while let Some(node) = curr {
+            if count == index {
+                // std::mem::replace allows us to move out the value of 'node' (the old node at this index)
+                // and replace it with a new ListNode, all while staying within the borrow checker's rules.
+                let node_at_index = std::mem::replace(node, ListNode { value, next: None });
+
+                // Now we link the old node that was previously at this position as the child of the new node.
+                node.next = Some(Box::new(node_at_index));
+            }
+            // Move to the next node by taking a mutable reference to the inner value of the Option Box.
+            curr = node.next.as_deref_mut();
+            count += 1;
+        }
+    }
+
+    /// Removes a node at the specified index and returns its value.
+    /// It swaps the content of the target node with its successor (next node).
+    fn pop_at(&mut self, index: usize) -> Option<i32> {
+        let mut curr = Some(self);
+        let mut count = 0;
+        while let Some(node) = curr {
+            if count == index {
+                // To "delete" a node in this struct (where self is the head and not an Option),
+                // we take its next neighbor and move its contents into the current position.
+                if let Some(boxed_next) = node.next.take() {
+                    let next_node = *boxed_next;
+                    // Replace the current node's data with the next node's data,
+                    // effectively "deleting" the current node by overwriting it with the next one.
+                    let old_node = std::mem::replace(node, next_node);
+                    return Some(old_node.value);
+                }
+            }
+            curr = node.next.as_deref_mut();
+            count += 1
+        }
+        None
+    }
+
 }
 
 pub fn run() {
