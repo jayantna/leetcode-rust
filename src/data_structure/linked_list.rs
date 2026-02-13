@@ -92,7 +92,39 @@ impl ListNode {
         return ListNode::get(&self, 0);
     }
 
-    
+    fn push_front(&mut self, value: i32) {
+        // Memomory swapping
+        // std::mem::replace(dest, src) does three things in one atomic step:
+        // 1. Reads the value out of dest (self).
+        // 2. Writes the src (ListNode::new(value)) into that same memory location.
+        // 3. Returns the original value that was in dest.
+        let old_node = std::mem::replace(self, ListNode::new(value));
+        self.next = Some(Box::new(old_node));
+    }
+    fn pop_front(&mut self) -> Option<i32> {
+        // Step 1: Check if there is a next node to replace the current one.
+        // .take() moves the Box out of the Option, leaving None behind. example below:
+        // let mut my_option = Some("hello".to_string());
+        // let taken_value = my_option.take();
+        // println!("Taken value: {:?}", taken_value);     // Output: Taken value: Some("hello")
+        // println!("My option after take: {:?}", my_option); // Output: My option after take: None
+        if let Some(boxed_next) = self.next.take() {
+            // Step 2: Unbox the next node so we have the raw ListNode struct.
+            let next_node = *boxed_next;
+            // Step 3: Swap 'self' with 'next_node'.
+            // 'self' gets overwritten with the data from the next node.
+            // 'old_head' receives the data that was just in 'self'.
+            let old_head = std::mem::replace(self, next_node);
+            // Step 4: Return the value of the old head.
+            Some(old_head.value)
+        } else {
+            // Edge Case: The list has only one node.
+            // Since 'self' is a struct and not an Option, we cannot delete the
+            // final node to make the list truly "empty" (Size 0).
+            None
+        }
+    }
+
 }
 
 pub fn run() {
