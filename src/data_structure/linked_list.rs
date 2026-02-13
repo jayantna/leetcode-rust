@@ -42,7 +42,16 @@ impl From<ListNode> for Vec<i32> {
         result
     }
 }
-
+impl Display for ListNode {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut curr = Some(self);
+        while let Some(node) = curr {
+            write!(f, "{} -> ", node.value)?;
+            curr = node.next.as_deref();
+        }
+        write!(f, "None")
+    }
+}
 
 impl ListNode {
     // There is no self in function parameter because there is no instance of ListNode created earlier.
